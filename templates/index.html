@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdventureWorks Dashboard</title>
+    <title>Fleet Service Management Dashboard</title>
     <!-- Add Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <!-- Add Font Awesome Icons -->
@@ -14,7 +14,7 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #e0e0e0;
             color: #333;
             transition: background-color 0.3s, color 0.3s;
         }
@@ -26,7 +26,7 @@
 
         /* Navbar */
         .navbar {
-            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            background: linear-gradient(90deg, #004d40, #00796b);
             padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
@@ -63,7 +63,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            background: linear-gradient(135deg, #004d40, #00796b);
             color: white;
             padding: 6rem 2rem;
             text-align: center;
@@ -152,7 +152,7 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: #6a11cb;
+            background: #004d40;
             color: white;
             padding: 10px 15px;
             border-radius: 50%;
@@ -162,7 +162,7 @@
         }
 
         .back-to-top:hover {
-            background: #2575fc;
+            background: #00796b;
         }
 
         /* Animations */
@@ -179,8 +179,7 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <!-- <a href="#" class="logo">AdventureWorks</a> -->
-        <a href="#" class="logo">Happy Workday</a>
+        <a href="#" class="logo">Fleet Service Management</a>
         <ul class="nav-links">
             <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="#dashboard"><i class="fas fa-chart-bar"></i> Dashboard</a></li>
@@ -194,14 +193,11 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <!-- <h1>Welcome to AdventureWorks</h1> -->
         <h1>Fleet Service Management</h1>
-        <!-- <p>Explore our interactive dashboard to gain insights into your data.</p> -->
-        <p>Explore our interactive dashboard to gain insights into your business.</p>
+        <p>Explore our interactive dashboard to gain insights into your fleet operations.</p>
     </section>
 
     <!-- Tableau Embed Section -->
-    
     <section id="dashboard" class="tableau-section">
         <div class='tableauPlaceholder' id='viz1739310381642' style='position: relative'><noscript><a href='#'><img
                         alt='Usage Metrics '
@@ -230,22 +226,22 @@
     <!-- Cards Section -->
     <section id="about" class="cards">
         <div class="card">
-            <h3>Data Insights</h3>
-            <p>Unlock powerful insights from your data with our interactive dashboards.</p>
+            <h3>Fleet Insights</h3>
+            <p>Unlock powerful insights from your fleet data with our interactive dashboards.</p>
         </div>
         <div class="card">
-            <h3>Custom Reports</h3>
-            <p>Generate custom reports tailored to your business needs.</p>
+            <h3>Maintenance Reports</h3>
+            <p>Generate custom maintenance reports tailored to your fleet's needs.</p>
         </div>
         <div class="card">
-            <h3>Real-Time Analytics</h3>
-            <p>Monitor your data in real-time with our advanced analytics tools.</p>
+            <h3>Real-Time Tracking</h3>
+            <p>Monitor your fleet in real-time with our advanced tracking tools.</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer id="contact" class="footer">
-        <p>&copy; 2023 AdventureWorks. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        <p>&copy; 2025 Fleet Service Management. All rights reserved. | <a href="#">Privacy Policy</a></p>
     </footer>
 
     <!-- Back-to-Top Button -->
@@ -292,3 +288,12 @@
     </script>
 </body>
 </html>
+ 
+ In this template, we have a simple HTML structure with a navbar, hero section, Tableau embed section, cards section, and footer. The Tableau embed section contains the Tableau visualization embedded using the Tableau JavaScript API. 
+ We also have some custom CSS styles for the layout and design of the dashboard. The JavaScript code at the end of the file adds interactivity to the page, such as smooth scrolling, a back-to-top button, and a dark mode toggle. 
+ Step 4: Run the Django Application 
+ Now that we have created the Django application and the HTML template, we can run the Django development server to view the Fleet Service Management dashboard. 
+ To start the Django development server, run the following command in the terminal: 
+ python manage.py runserver
+ 
+ This command will start the Django development server on  http://
