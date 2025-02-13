@@ -14,7 +14,7 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e0e0e0;
+            background-color: #f4f4f9;
             color: #333;
             transition: background-color 0.3s, color 0.3s;
         }
@@ -63,7 +63,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #004d40, #00796b);
+            background: url('path/to/your/fleet-image.jpg') no-repeat center center/cover;
             color: white;
             padding: 6rem 2rem;
             text-align: center;
@@ -179,7 +179,7 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <a href="#" class="logo">Happy Work Day: February 13, 2025</a>
+        <a href="#" class="logo" id="logo">Happy Work Day</a>
         <ul class="nav-links">
             <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="#dashboard"><i class="fas fa-chart-bar"></i> Dashboard</a></li>
@@ -241,7 +241,7 @@
             <h3>Contact</h3>
             <p>Get in touch with us for any queries or support.</p>
             <p>Email: support@fleetservice.com</p>
-            <p>Phone: +1 (800) 123-4567</p>
+            <p>Phone: +1 (800) 954-9366</p> 
         </div>
     </section>
 
@@ -291,6 +291,12 @@
             darkModeToggle.querySelector('i').classList.toggle('fa-sun');
             darkModeToggle.querySelector('i').classList.toggle('fa-moon');
         });
+
+        // Set current date
+        const logoElement = document.getElementById('logo');
+        const currentDate = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        logoElement.textContent = `Happy Work Day: ${currentDate.toLocaleDateString('en-US', options)}`;
     </script>
 </body>
 </html>
