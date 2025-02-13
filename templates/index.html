@@ -61,6 +61,54 @@
             color: #ffdd57;
         }
 
+        /* Sidebar */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1001;
+            top: 0;
+            left: 0;
+            background-color: #004d40;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #ffdd57;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 2rem;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            font-size: 1.5rem;
+            cursor: pointer;
+            background-color: #004d40;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+        }
+
+        .openbtn:hover {
+            background-color: #00796b;
+        }
+
         /* Hero Section */
         .hero {
             background: url('../static/images/fleet-management.jpg') no-repeat center center/cover;
@@ -200,6 +248,16 @@
         </button>
     </nav>
 
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#fleet-insights">Fleet Insights</a>
+        <a href="#maintenance-reports">Maintenance Reports</a>
+        <a href="#real-time-tracking">Real-Time Tracking</a>
+    </div>
+
+    <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
         <h1>Fleet Service Management</h1>
@@ -249,15 +307,15 @@
 
     <!-- Cards Section -->
     <section id="cards" class="cards">
-        <div class="card">
+        <div class="card" id="fleet-insights">
             <h3>Fleet Insights</h3>
             <p>Unlock powerful insights from your fleet data with our interactive dashboards.</p>
         </div>
-        <div class="card">
+        <div class="card" id="maintenance-reports">
             <h3>Maintenance Reports</h3>
             <p>Generate custom maintenance reports tailored to your fleet's needs.</p>
         </div>
-        <div class="card">
+        <div class="card" id="real-time-tracking">
             <h3>Real-Time Tracking</h3>
             <p>Monitor your fleet in real-time with our advanced tracking tools.</p>
         </div>
@@ -321,6 +379,15 @@
         const currentDate = new Date();
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         logoElement.textContent = `Happy Work Day: ${currentDate.toLocaleDateString('en-US', options)}`;
+
+        // Sidebar functions
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
     </script>
 </body>
 </html>
