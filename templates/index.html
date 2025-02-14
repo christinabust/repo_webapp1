@@ -111,7 +111,7 @@
 
         /* Hero Section */
         .hero {
-            background: url('../static/fleet-management.jpg') no-repeat center center/cover;
+            background: url('../static/fleet management.jpg') no-repeat center center/cover;
             color: white;
             padding: 6rem 2rem;
             text-align: center;
@@ -121,6 +121,7 @@
             font-size: 3rem;
             margin-bottom: 1rem;
             animation: fadeIn 2s ease-in-out;
+            color: #ffdd57; /* Updated color */
         }
 
         .hero p {
@@ -343,9 +344,13 @@
         document.querySelectorAll('.nav-links a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
 
