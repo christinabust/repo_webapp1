@@ -141,18 +141,18 @@
             font-size: 1.2rem;
         }
 
-        /* Star Animation */
-        .star {
+        /* Snowflake Animation */
+        .snowflake {
             position: absolute;
-            width: 5px;
-            height: 5px;
+            width: 10px;
+            height: 10px;
             background: white;
             border-radius: 50%;
             opacity: 0;
-            animation: drop 3s infinite;
+            animation: fall 5s linear infinite;
         }
 
-        @keyframes drop {
+        @keyframes fall {
             0% {
                 transform: translateY(-100%);
                 opacity: 1;
@@ -418,20 +418,20 @@
             document.getElementById("mySidebar").style.width = "0";
         }
 
-        // Create Stars
-        function createStar() {
-            const star = document.createElement('div');
-            star.classList.add('star');
-            star.style.left = `${Math.random() * 100}vw`;
-            star.style.animationDuration = `${Math.random() * 2 + 3}s`;
-            document.querySelector('.hero').appendChild(star);
+        // Create Snowflakes
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = `${Math.random() * 100}vw`;
+            snowflake.style.animationDuration = `${Math.random() * 2 + 3}s`;
+            document.querySelector('.hero').appendChild(snowflake);
 
             setTimeout(() => {
-                star.remove();
+                snowflake.remove();
             }, 5000);
         }
 
-        setInterval(createStar, 300);
+        setInterval(createSnowflake, 300);
     </script>
 </body>
 </html>
